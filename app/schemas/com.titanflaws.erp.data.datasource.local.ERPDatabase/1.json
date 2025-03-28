@@ -1,0 +1,2707 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "883aea9497fbb6d5c94efcdab33a8aba",
+    "entities": [
+      {
+        "tableName": "users",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`uid` TEXT NOT NULL, `email` TEXT NOT NULL, `fullName` TEXT NOT NULL, `phoneNumber` TEXT NOT NULL, `address` TEXT NOT NULL, `role` TEXT NOT NULL, `profilePicUrl` TEXT, `isActive` INTEGER NOT NULL, `lastLogin` INTEGER, `createdAt` INTEGER NOT NULL, `fcmToken` TEXT, PRIMARY KEY(`uid`))",
+        "fields": [
+          {
+            "fieldPath": "uid",
+            "columnName": "uid",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "email",
+            "columnName": "email",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fullName",
+            "columnName": "fullName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "phoneNumber",
+            "columnName": "phoneNumber",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "address",
+            "columnName": "address",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "role",
+            "columnName": "role",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "profilePicUrl",
+            "columnName": "profilePicUrl",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isActive",
+            "columnName": "isActive",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastLogin",
+            "columnName": "lastLogin",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fcmToken",
+            "columnName": "fcmToken",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "uid"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "students",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`studentId` TEXT NOT NULL, `userId` TEXT NOT NULL, `sectionId` TEXT NOT NULL, `firstName` TEXT NOT NULL, `lastName` TEXT NOT NULL, `rollNumber` TEXT, `admissionNumber` TEXT, `classId` TEXT, `parentIds` TEXT, `subjects` TEXT, `attendancePercentage` REAL NOT NULL, `courseProgress` TEXT, `currentAddress` TEXT, `permanentAddress` TEXT, `bloodGroup` TEXT, `emergencyContact` TEXT, `admissionDate` INTEGER, `dob` INTEGER, `gender` TEXT, `isActive` INTEGER NOT NULL, `category` TEXT, `fees` TEXT, `previousSchool` TEXT, `previousClass` TEXT, `transferCertificate` TEXT, `medicalHistory` TEXT, `achievements` TEXT, PRIMARY KEY(`studentId`))",
+        "fields": [
+          {
+            "fieldPath": "studentId",
+            "columnName": "studentId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "userId",
+            "columnName": "userId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sectionId",
+            "columnName": "sectionId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "firstName",
+            "columnName": "firstName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastName",
+            "columnName": "lastName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rollNumber",
+            "columnName": "rollNumber",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "admissionNumber",
+            "columnName": "admissionNumber",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "classId",
+            "columnName": "classId",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "parentIds",
+            "columnName": "parentIds",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "subjects",
+            "columnName": "subjects",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "attendancePercentage",
+            "columnName": "attendancePercentage",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "courseProgress",
+            "columnName": "courseProgress",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "currentAddress",
+            "columnName": "currentAddress",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "permanentAddress",
+            "columnName": "permanentAddress",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "bloodGroup",
+            "columnName": "bloodGroup",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "emergencyContact",
+            "columnName": "emergencyContact",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "admissionDate",
+            "columnName": "admissionDate",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "dob",
+            "columnName": "dob",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "gender",
+            "columnName": "gender",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isActive",
+            "columnName": "isActive",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "category",
+            "columnName": "category",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "fees",
+            "columnName": "fees",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "previousSchool",
+            "columnName": "previousSchool",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "previousClass",
+            "columnName": "previousClass",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "transferCertificate",
+            "columnName": "transferCertificate",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "medicalHistory",
+            "columnName": "medicalHistory",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "achievements",
+            "columnName": "achievements",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "studentId"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "teachers",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`teacherId` TEXT NOT NULL, `userId` TEXT NOT NULL, `employeeId` TEXT NOT NULL, `department` TEXT, `designation` TEXT, `qualifications` TEXT, `specialization` TEXT, `classesTaught` TEXT, `subjectsTaught` TEXT, `joinDate` INTEGER, `joiningDate` INTEGER, `employmentType` TEXT, `salary` REAL, `isActive` INTEGER NOT NULL, `experience` INTEGER, `schedule` TEXT, PRIMARY KEY(`teacherId`))",
+        "fields": [
+          {
+            "fieldPath": "teacherId",
+            "columnName": "teacherId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "userId",
+            "columnName": "userId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "employeeId",
+            "columnName": "employeeId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "department",
+            "columnName": "department",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "designation",
+            "columnName": "designation",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "qualifications",
+            "columnName": "qualifications",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "specialization",
+            "columnName": "specialization",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "classesTaught",
+            "columnName": "classesTaught",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "subjectsTaught",
+            "columnName": "subjectsTaught",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "joinDate",
+            "columnName": "joinDate",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "joiningDate",
+            "columnName": "joiningDate",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "employmentType",
+            "columnName": "employmentType",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "salary",
+            "columnName": "salary",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isActive",
+            "columnName": "isActive",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "experience",
+            "columnName": "experience",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "schedule",
+            "columnName": "schedule",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "teacherId"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "staff",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`staffId` TEXT NOT NULL, `userId` TEXT NOT NULL, `employeeId` TEXT NOT NULL, `firstName` TEXT NOT NULL, `lastName` TEXT NOT NULL, `dob` INTEGER NOT NULL, `gender` TEXT NOT NULL, `department` TEXT NOT NULL, `designation` TEXT NOT NULL, `qualification` TEXT NOT NULL, `experience` INTEGER NOT NULL, `joiningDate` INTEGER NOT NULL, `salary` REAL NOT NULL, `address` TEXT NOT NULL, `contactNumber` TEXT NOT NULL, `emergencyContact` TEXT NOT NULL, `documents` TEXT, `isActive` INTEGER NOT NULL, `registeredAt` INTEGER NOT NULL, PRIMARY KEY(`staffId`), FOREIGN KEY(`userId`) REFERENCES `users`(`uid`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "staffId",
+            "columnName": "staffId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "userId",
+            "columnName": "userId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "employeeId",
+            "columnName": "employeeId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "firstName",
+            "columnName": "firstName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastName",
+            "columnName": "lastName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dob",
+            "columnName": "dob",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "gender",
+            "columnName": "gender",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "department",
+            "columnName": "department",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "designation",
+            "columnName": "designation",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "qualification",
+            "columnName": "qualification",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "experience",
+            "columnName": "experience",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "joiningDate",
+            "columnName": "joiningDate",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "salary",
+            "columnName": "salary",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "address",
+            "columnName": "address",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "contactNumber",
+            "columnName": "contactNumber",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "emergencyContact",
+            "columnName": "emergencyContact",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "documents",
+            "columnName": "documents",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isActive",
+            "columnName": "isActive",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "registeredAt",
+            "columnName": "registeredAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "staffId"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_staff_userId",
+            "unique": false,
+            "columnNames": [
+              "userId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_staff_userId` ON `${TABLE_NAME}` (`userId`)"
+          },
+          {
+            "name": "index_staff_employeeId",
+            "unique": true,
+            "columnNames": [
+              "employeeId"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_staff_employeeId` ON `${TABLE_NAME}` (`employeeId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "users",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "userId"
+            ],
+            "referencedColumns": [
+              "uid"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "parents",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`parentId` TEXT NOT NULL, `userId` TEXT NOT NULL, `firstName` TEXT NOT NULL, `lastName` TEXT NOT NULL, `relation` TEXT NOT NULL, `occupation` TEXT, `education` TEXT, `annualIncome` REAL, `studentIds` TEXT, `address` TEXT NOT NULL, `phoneNumber` TEXT NOT NULL, `alternatePhoneNumber` TEXT, `email` TEXT NOT NULL, `documents` TEXT, `isActive` INTEGER NOT NULL, `registeredAt` INTEGER NOT NULL, PRIMARY KEY(`parentId`), FOREIGN KEY(`userId`) REFERENCES `users`(`uid`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "parentId",
+            "columnName": "parentId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "userId",
+            "columnName": "userId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "firstName",
+            "columnName": "firstName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastName",
+            "columnName": "lastName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "relation",
+            "columnName": "relation",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "occupation",
+            "columnName": "occupation",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "education",
+            "columnName": "education",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "annualIncome",
+            "columnName": "annualIncome",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "studentIds",
+            "columnName": "studentIds",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "address",
+            "columnName": "address",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "phoneNumber",
+            "columnName": "phoneNumber",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "alternatePhoneNumber",
+            "columnName": "alternatePhoneNumber",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "email",
+            "columnName": "email",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "documents",
+            "columnName": "documents",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isActive",
+            "columnName": "isActive",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "registeredAt",
+            "columnName": "registeredAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "parentId"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_parents_userId",
+            "unique": false,
+            "columnNames": [
+              "userId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_parents_userId` ON `${TABLE_NAME}` (`userId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "users",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "userId"
+            ],
+            "referencedColumns": [
+              "uid"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "courses",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`courseId` TEXT NOT NULL, `name` TEXT NOT NULL, `code` TEXT NOT NULL, `description` TEXT NOT NULL, `department` TEXT, `credits` INTEGER NOT NULL, `teacherId` TEXT, `classIds` TEXT, `status` TEXT NOT NULL, `syllabus` TEXT, `academicYear` TEXT, `semester` TEXT, PRIMARY KEY(`courseId`))",
+        "fields": [
+          {
+            "fieldPath": "courseId",
+            "columnName": "courseId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "code",
+            "columnName": "code",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "department",
+            "columnName": "department",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "credits",
+            "columnName": "credits",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "teacherId",
+            "columnName": "teacherId",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "classIds",
+            "columnName": "classIds",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "status",
+            "columnName": "status",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "syllabus",
+            "columnName": "syllabus",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "academicYear",
+            "columnName": "academicYear",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "semester",
+            "columnName": "semester",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "courseId"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "class_sections",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`classSectionId` TEXT NOT NULL, `className` TEXT NOT NULL, `sectionName` TEXT NOT NULL, `displayName` TEXT NOT NULL, `academicYearId` TEXT NOT NULL, `capacity` INTEGER NOT NULL, `currentStudentCount` INTEGER NOT NULL, `classTeacherId` TEXT, `isActive` INTEGER NOT NULL, `roomNumber` TEXT, `description` TEXT, `createdAt` INTEGER NOT NULL, `updatedAt` INTEGER NOT NULL, `timeSlot` TEXT, `startTime` TEXT, `endTime` TEXT, PRIMARY KEY(`classSectionId`))",
+        "fields": [
+          {
+            "fieldPath": "classSectionId",
+            "columnName": "classSectionId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "className",
+            "columnName": "className",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sectionName",
+            "columnName": "sectionName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "displayName",
+            "columnName": "displayName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "academicYearId",
+            "columnName": "academicYearId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "capacity",
+            "columnName": "capacity",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "currentStudentCount",
+            "columnName": "currentStudentCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "classTeacherId",
+            "columnName": "classTeacherId",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isActive",
+            "columnName": "isActive",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "roomNumber",
+            "columnName": "roomNumber",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAt",
+            "columnName": "updatedAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "timeSlot",
+            "columnName": "timeSlot",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "startTime",
+            "columnName": "startTime",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "endTime",
+            "columnName": "endTime",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "classSectionId"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "attendance",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`attendanceId` TEXT NOT NULL, `userId` TEXT NOT NULL, `userType` TEXT NOT NULL, `date` INTEGER NOT NULL, `status` TEXT NOT NULL, `courseId` TEXT, `classId` TEXT, `sectionId` TEXT, `markedById` TEXT NOT NULL, `reason` TEXT, `remarks` TEXT, `createdAt` INTEGER NOT NULL, `updatedAt` INTEGER NOT NULL, PRIMARY KEY(`attendanceId`), FOREIGN KEY(`userId`) REFERENCES `users`(`uid`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "attendanceId",
+            "columnName": "attendanceId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "userId",
+            "columnName": "userId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "userType",
+            "columnName": "userType",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "date",
+            "columnName": "date",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "status",
+            "columnName": "status",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "courseId",
+            "columnName": "courseId",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "classId",
+            "columnName": "classId",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "sectionId",
+            "columnName": "sectionId",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "markedById",
+            "columnName": "markedById",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "reason",
+            "columnName": "reason",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "remarks",
+            "columnName": "remarks",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAt",
+            "columnName": "updatedAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "attendanceId"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_attendance_userId",
+            "unique": false,
+            "columnNames": [
+              "userId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_attendance_userId` ON `${TABLE_NAME}` (`userId`)"
+          },
+          {
+            "name": "index_attendance_date",
+            "unique": false,
+            "columnNames": [
+              "date"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_attendance_date` ON `${TABLE_NAME}` (`date`)"
+          },
+          {
+            "name": "index_attendance_userId_date_courseId",
+            "unique": true,
+            "columnNames": [
+              "userId",
+              "date",
+              "courseId"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_attendance_userId_date_courseId` ON `${TABLE_NAME}` (`userId`, `date`, `courseId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "users",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "userId"
+            ],
+            "referencedColumns": [
+              "uid"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "exams",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`examId` TEXT NOT NULL, `classId` TEXT NOT NULL, `title` TEXT NOT NULL, `description` TEXT, `examType` TEXT NOT NULL, `courseId` TEXT NOT NULL, `courseName` TEXT, `startDate` INTEGER NOT NULL, `endDate` INTEGER, `duration` INTEGER, `totalMarks` INTEGER NOT NULL, `passingMarks` INTEGER NOT NULL, `gradeScale` TEXT, `isPublished` INTEGER NOT NULL, `status` TEXT NOT NULL, `createdBy` TEXT, `createdAt` INTEGER NOT NULL, `updatedAt` INTEGER NOT NULL, PRIMARY KEY(`examId`))",
+        "fields": [
+          {
+            "fieldPath": "examId",
+            "columnName": "examId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "classId",
+            "columnName": "classId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "examType",
+            "columnName": "examType",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "courseId",
+            "columnName": "courseId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "courseName",
+            "columnName": "courseName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "startDate",
+            "columnName": "startDate",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "endDate",
+            "columnName": "endDate",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "duration",
+            "columnName": "duration",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "totalMarks",
+            "columnName": "totalMarks",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "passingMarks",
+            "columnName": "passingMarks",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "gradeScale",
+            "columnName": "gradeScale",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isPublished",
+            "columnName": "isPublished",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "status",
+            "columnName": "status",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdBy",
+            "columnName": "createdBy",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAt",
+            "columnName": "updatedAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "examId"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "exam_results",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`resultId` TEXT NOT NULL, `examId` TEXT NOT NULL, `studentId` TEXT NOT NULL, `marksObtained` REAL NOT NULL, `percentage` REAL NOT NULL, `status` TEXT NOT NULL, `grade` TEXT, `courseId` TEXT, `courseName` TEXT, `remarks` TEXT, `evaluatedBy` TEXT, `evaluatedAt` INTEGER, `createdAt` INTEGER NOT NULL, `updatedAt` INTEGER NOT NULL, PRIMARY KEY(`resultId`))",
+        "fields": [
+          {
+            "fieldPath": "resultId",
+            "columnName": "resultId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "examId",
+            "columnName": "examId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "studentId",
+            "columnName": "studentId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "marksObtained",
+            "columnName": "marksObtained",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "percentage",
+            "columnName": "percentage",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "status",
+            "columnName": "status",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "grade",
+            "columnName": "grade",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "courseId",
+            "columnName": "courseId",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "courseName",
+            "columnName": "courseName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "remarks",
+            "columnName": "remarks",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "evaluatedBy",
+            "columnName": "evaluatedBy",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "evaluatedAt",
+            "columnName": "evaluatedAt",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAt",
+            "columnName": "updatedAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "resultId"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "fees",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`feeId` TEXT NOT NULL, `name` TEXT NOT NULL, `description` TEXT, `amount` REAL NOT NULL, `frequency` TEXT NOT NULL, `dueDay` INTEGER, `academicYearId` TEXT NOT NULL, `classIds` TEXT, `isOptional` INTEGER NOT NULL, `createdBy` TEXT NOT NULL, `isActive` INTEGER NOT NULL, `createdAt` INTEGER NOT NULL, `updatedAt` INTEGER NOT NULL, PRIMARY KEY(`feeId`))",
+        "fields": [
+          {
+            "fieldPath": "feeId",
+            "columnName": "feeId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "amount",
+            "columnName": "amount",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "frequency",
+            "columnName": "frequency",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dueDay",
+            "columnName": "dueDay",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "academicYearId",
+            "columnName": "academicYearId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "classIds",
+            "columnName": "classIds",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isOptional",
+            "columnName": "isOptional",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdBy",
+            "columnName": "createdBy",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isActive",
+            "columnName": "isActive",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAt",
+            "columnName": "updatedAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "feeId"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "fee_payments",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`paymentId` TEXT NOT NULL, `studentId` TEXT NOT NULL, `feeId` TEXT NOT NULL, `invoiceNumber` TEXT NOT NULL, `amount` REAL NOT NULL, `paymentDate` INTEGER, `dueDate` INTEGER NOT NULL, `paymentMethod` TEXT, `transactionId` TEXT, `receiptNumber` TEXT, `status` TEXT NOT NULL, `paymentDetails` TEXT, `period` TEXT, `lateFee` REAL NOT NULL, `discount` REAL NOT NULL, `collectedBy` TEXT, `remarks` TEXT, `createdAt` INTEGER NOT NULL, `updatedAt` INTEGER NOT NULL, PRIMARY KEY(`paymentId`), FOREIGN KEY(`studentId`) REFERENCES `students`(`studentId`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`feeId`) REFERENCES `fees`(`feeId`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "paymentId",
+            "columnName": "paymentId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "studentId",
+            "columnName": "studentId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "feeId",
+            "columnName": "feeId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "invoiceNumber",
+            "columnName": "invoiceNumber",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "amount",
+            "columnName": "amount",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "paymentDate",
+            "columnName": "paymentDate",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "dueDate",
+            "columnName": "dueDate",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "paymentMethod",
+            "columnName": "paymentMethod",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "transactionId",
+            "columnName": "transactionId",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "receiptNumber",
+            "columnName": "receiptNumber",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "status",
+            "columnName": "status",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "paymentDetails",
+            "columnName": "paymentDetails",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "period",
+            "columnName": "period",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "lateFee",
+            "columnName": "lateFee",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "discount",
+            "columnName": "discount",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "collectedBy",
+            "columnName": "collectedBy",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "remarks",
+            "columnName": "remarks",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAt",
+            "columnName": "updatedAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "paymentId"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_fee_payments_studentId",
+            "unique": false,
+            "columnNames": [
+              "studentId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_fee_payments_studentId` ON `${TABLE_NAME}` (`studentId`)"
+          },
+          {
+            "name": "index_fee_payments_feeId",
+            "unique": false,
+            "columnNames": [
+              "feeId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_fee_payments_feeId` ON `${TABLE_NAME}` (`feeId`)"
+          },
+          {
+            "name": "index_fee_payments_invoiceNumber",
+            "unique": true,
+            "columnNames": [
+              "invoiceNumber"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_fee_payments_invoiceNumber` ON `${TABLE_NAME}` (`invoiceNumber`)"
+          },
+          {
+            "name": "index_fee_payments_receiptNumber",
+            "unique": true,
+            "columnNames": [
+              "receiptNumber"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_fee_payments_receiptNumber` ON `${TABLE_NAME}` (`receiptNumber`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "students",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "studentId"
+            ],
+            "referencedColumns": [
+              "studentId"
+            ]
+          },
+          {
+            "table": "fees",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "feeId"
+            ],
+            "referencedColumns": [
+              "feeId"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "assignments",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`assignmentId` TEXT NOT NULL, `title` TEXT NOT NULL, `description` TEXT, `courseId` TEXT NOT NULL, `classIds` TEXT NOT NULL, `teacherId` TEXT NOT NULL, `dueDate` INTEGER NOT NULL, `totalMarks` INTEGER NOT NULL, `assignmentType` TEXT NOT NULL, `attachmentUrls` TEXT, `submissionType` TEXT NOT NULL, `status` TEXT NOT NULL, `createdAt` INTEGER NOT NULL, `updatedAt` INTEGER NOT NULL, PRIMARY KEY(`assignmentId`), FOREIGN KEY(`courseId`) REFERENCES `courses`(`courseId`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`teacherId`) REFERENCES `teachers`(`teacherId`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "assignmentId",
+            "columnName": "assignmentId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "courseId",
+            "columnName": "courseId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "classIds",
+            "columnName": "classIds",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "teacherId",
+            "columnName": "teacherId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dueDate",
+            "columnName": "dueDate",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "totalMarks",
+            "columnName": "totalMarks",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "assignmentType",
+            "columnName": "assignmentType",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "attachmentUrls",
+            "columnName": "attachmentUrls",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "submissionType",
+            "columnName": "submissionType",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "status",
+            "columnName": "status",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAt",
+            "columnName": "updatedAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "assignmentId"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_assignments_courseId",
+            "unique": false,
+            "columnNames": [
+              "courseId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_assignments_courseId` ON `${TABLE_NAME}` (`courseId`)"
+          },
+          {
+            "name": "index_assignments_teacherId",
+            "unique": false,
+            "columnNames": [
+              "teacherId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_assignments_teacherId` ON `${TABLE_NAME}` (`teacherId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "courses",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "courseId"
+            ],
+            "referencedColumns": [
+              "courseId"
+            ]
+          },
+          {
+            "table": "teachers",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "teacherId"
+            ],
+            "referencedColumns": [
+              "teacherId"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "notifications",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`notificationId` TEXT NOT NULL, `title` TEXT NOT NULL, `message` TEXT NOT NULL, `type` TEXT NOT NULL, `priority` TEXT NOT NULL, `recipientId` TEXT, `recipientRole` TEXT, `senderName` TEXT NOT NULL, `senderId` TEXT NOT NULL, `relatedEntityId` TEXT, `relatedEntityType` TEXT, `actionUrl` TEXT, `isRead` INTEGER NOT NULL, `createdAt` INTEGER NOT NULL, PRIMARY KEY(`notificationId`))",
+        "fields": [
+          {
+            "fieldPath": "notificationId",
+            "columnName": "notificationId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "message",
+            "columnName": "message",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "priority",
+            "columnName": "priority",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recipientId",
+            "columnName": "recipientId",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "recipientRole",
+            "columnName": "recipientRole",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "senderName",
+            "columnName": "senderName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "senderId",
+            "columnName": "senderId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "relatedEntityId",
+            "columnName": "relatedEntityId",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "relatedEntityType",
+            "columnName": "relatedEntityType",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "actionUrl",
+            "columnName": "actionUrl",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isRead",
+            "columnName": "isRead",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "notificationId"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "timetable",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`timeTableId` TEXT NOT NULL, `classSectionId` TEXT NOT NULL, `courseId` TEXT NOT NULL, `teacherId` TEXT NOT NULL, `dayOfWeek` INTEGER NOT NULL, `startTime` INTEGER NOT NULL, `endTime` INTEGER NOT NULL, `roomNumber` TEXT, `isActive` INTEGER NOT NULL, `academicYearId` TEXT NOT NULL, `createdBy` TEXT NOT NULL, `createdAt` INTEGER NOT NULL, `updatedAt` INTEGER NOT NULL, PRIMARY KEY(`timeTableId`), FOREIGN KEY(`classSectionId`) REFERENCES `class_sections`(`classSectionId`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`courseId`) REFERENCES `courses`(`courseId`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`teacherId`) REFERENCES `teachers`(`teacherId`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "timeTableId",
+            "columnName": "timeTableId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "classSectionId",
+            "columnName": "classSectionId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "courseId",
+            "columnName": "courseId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "teacherId",
+            "columnName": "teacherId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dayOfWeek",
+            "columnName": "dayOfWeek",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "startTime",
+            "columnName": "startTime",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "endTime",
+            "columnName": "endTime",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "roomNumber",
+            "columnName": "roomNumber",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isActive",
+            "columnName": "isActive",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "academicYearId",
+            "columnName": "academicYearId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdBy",
+            "columnName": "createdBy",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAt",
+            "columnName": "updatedAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "timeTableId"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_timetable_classSectionId",
+            "unique": false,
+            "columnNames": [
+              "classSectionId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_timetable_classSectionId` ON `${TABLE_NAME}` (`classSectionId`)"
+          },
+          {
+            "name": "index_timetable_courseId",
+            "unique": false,
+            "columnNames": [
+              "courseId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_timetable_courseId` ON `${TABLE_NAME}` (`courseId`)"
+          },
+          {
+            "name": "index_timetable_teacherId",
+            "unique": false,
+            "columnNames": [
+              "teacherId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_timetable_teacherId` ON `${TABLE_NAME}` (`teacherId`)"
+          },
+          {
+            "name": "index_timetable_classSectionId_dayOfWeek_startTime",
+            "unique": true,
+            "columnNames": [
+              "classSectionId",
+              "dayOfWeek",
+              "startTime"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_timetable_classSectionId_dayOfWeek_startTime` ON `${TABLE_NAME}` (`classSectionId`, `dayOfWeek`, `startTime`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "class_sections",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "classSectionId"
+            ],
+            "referencedColumns": [
+              "classSectionId"
+            ]
+          },
+          {
+            "table": "courses",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "courseId"
+            ],
+            "referencedColumns": [
+              "courseId"
+            ]
+          },
+          {
+            "table": "teachers",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "teacherId"
+            ],
+            "referencedColumns": [
+              "teacherId"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "library_books",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`bookId` TEXT NOT NULL, `title` TEXT NOT NULL, `author` TEXT NOT NULL, `isbn` TEXT NOT NULL, `publisher` TEXT, `publicationYear` INTEGER, `edition` TEXT, `category` TEXT NOT NULL, `location` TEXT, `price` REAL, `quantity` INTEGER NOT NULL, `availableQuantity` INTEGER NOT NULL, `coverImageUrl` TEXT, `description` TEXT, `tags` TEXT, `language` TEXT, `pageCount` INTEGER, `isActive` INTEGER NOT NULL, `addedBy` TEXT NOT NULL, `createdAt` INTEGER NOT NULL, `updatedAt` INTEGER NOT NULL, PRIMARY KEY(`bookId`))",
+        "fields": [
+          {
+            "fieldPath": "bookId",
+            "columnName": "bookId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "author",
+            "columnName": "author",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isbn",
+            "columnName": "isbn",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "publisher",
+            "columnName": "publisher",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "publicationYear",
+            "columnName": "publicationYear",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "edition",
+            "columnName": "edition",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "category",
+            "columnName": "category",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "location",
+            "columnName": "location",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "price",
+            "columnName": "price",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "quantity",
+            "columnName": "quantity",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "availableQuantity",
+            "columnName": "availableQuantity",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "coverImageUrl",
+            "columnName": "coverImageUrl",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "tags",
+            "columnName": "tags",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "language",
+            "columnName": "language",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "pageCount",
+            "columnName": "pageCount",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isActive",
+            "columnName": "isActive",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "addedBy",
+            "columnName": "addedBy",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAt",
+            "columnName": "updatedAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "bookId"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_library_books_isbn",
+            "unique": true,
+            "columnNames": [
+              "isbn"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_library_books_isbn` ON `${TABLE_NAME}` (`isbn`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "book_issues",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`issueId` TEXT NOT NULL, `bookId` TEXT NOT NULL, `userId` TEXT NOT NULL, `userType` TEXT NOT NULL, `issueDate` INTEGER NOT NULL, `dueDate` INTEGER NOT NULL, `returnDate` INTEGER, `status` TEXT NOT NULL, `fine` REAL NOT NULL, `fineStatus` TEXT, `issuedBy` TEXT NOT NULL, `receivedBy` TEXT, `remarks` TEXT, `createdAt` INTEGER NOT NULL, `updatedAt` INTEGER NOT NULL, PRIMARY KEY(`issueId`), FOREIGN KEY(`bookId`) REFERENCES `library_books`(`bookId`) ON UPDATE NO ACTION ON DELETE RESTRICT , FOREIGN KEY(`userId`) REFERENCES `users`(`uid`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "issueId",
+            "columnName": "issueId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "bookId",
+            "columnName": "bookId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "userId",
+            "columnName": "userId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "userType",
+            "columnName": "userType",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "issueDate",
+            "columnName": "issueDate",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dueDate",
+            "columnName": "dueDate",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "returnDate",
+            "columnName": "returnDate",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "status",
+            "columnName": "status",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fine",
+            "columnName": "fine",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fineStatus",
+            "columnName": "fineStatus",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "issuedBy",
+            "columnName": "issuedBy",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "receivedBy",
+            "columnName": "receivedBy",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "remarks",
+            "columnName": "remarks",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAt",
+            "columnName": "updatedAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "issueId"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_book_issues_bookId",
+            "unique": false,
+            "columnNames": [
+              "bookId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_book_issues_bookId` ON `${TABLE_NAME}` (`bookId`)"
+          },
+          {
+            "name": "index_book_issues_userId",
+            "unique": false,
+            "columnNames": [
+              "userId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_book_issues_userId` ON `${TABLE_NAME}` (`userId`)"
+          },
+          {
+            "name": "index_book_issues_bookId_userId_status",
+            "unique": true,
+            "columnNames": [
+              "bookId",
+              "userId",
+              "status"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_book_issues_bookId_userId_status` ON `${TABLE_NAME}` (`bookId`, `userId`, `status`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "library_books",
+            "onDelete": "RESTRICT",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "bookId"
+            ],
+            "referencedColumns": [
+              "bookId"
+            ]
+          },
+          {
+            "table": "users",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "userId"
+            ],
+            "referencedColumns": [
+              "uid"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "transport_vehicles",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`vehicleId` TEXT NOT NULL, `registrationNumber` TEXT NOT NULL, `type` TEXT NOT NULL, `model` TEXT, `capacity` INTEGER NOT NULL, `driver` TEXT NOT NULL, `driverContactNumber` TEXT NOT NULL, `assistant` TEXT, `assistantContactNumber` TEXT, `routeId` TEXT, `status` TEXT NOT NULL, `gpsDeviceId` TEXT, `insuranceNumber` TEXT, `insuranceValidUntil` INTEGER, `fitnessValidUntil` INTEGER, `purchaseDate` INTEGER, `lastMaintenanceDate` INTEGER, `nextMaintenanceDate` INTEGER, `isActive` INTEGER NOT NULL, `createdAt` INTEGER NOT NULL, `updatedAt` INTEGER NOT NULL, PRIMARY KEY(`vehicleId`))",
+        "fields": [
+          {
+            "fieldPath": "vehicleId",
+            "columnName": "vehicleId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "registrationNumber",
+            "columnName": "registrationNumber",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "model",
+            "columnName": "model",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "capacity",
+            "columnName": "capacity",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "driver",
+            "columnName": "driver",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "driverContactNumber",
+            "columnName": "driverContactNumber",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "assistant",
+            "columnName": "assistant",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "assistantContactNumber",
+            "columnName": "assistantContactNumber",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "routeId",
+            "columnName": "routeId",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "status",
+            "columnName": "status",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "gpsDeviceId",
+            "columnName": "gpsDeviceId",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "insuranceNumber",
+            "columnName": "insuranceNumber",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "insuranceValidUntil",
+            "columnName": "insuranceValidUntil",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "fitnessValidUntil",
+            "columnName": "fitnessValidUntil",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "purchaseDate",
+            "columnName": "purchaseDate",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "lastMaintenanceDate",
+            "columnName": "lastMaintenanceDate",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "nextMaintenanceDate",
+            "columnName": "nextMaintenanceDate",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isActive",
+            "columnName": "isActive",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAt",
+            "columnName": "updatedAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "vehicleId"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_transport_vehicles_registrationNumber",
+            "unique": true,
+            "columnNames": [
+              "registrationNumber"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_transport_vehicles_registrationNumber` ON `${TABLE_NAME}` (`registrationNumber`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "route_stops",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`stopId` TEXT NOT NULL, `routeId` TEXT NOT NULL, `stopName` TEXT NOT NULL, `stopAddress` TEXT NOT NULL, `stopNumber` INTEGER NOT NULL, `pickupTime` INTEGER NOT NULL, `dropTime` INTEGER NOT NULL, `latitude` REAL, `longitude` REAL, `studentIds` TEXT, `isActive` INTEGER NOT NULL, `createdAt` INTEGER NOT NULL, `updatedAt` INTEGER NOT NULL, PRIMARY KEY(`stopId`), FOREIGN KEY(`routeId`) REFERENCES `transport_vehicles`(`vehicleId`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "stopId",
+            "columnName": "stopId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "routeId",
+            "columnName": "routeId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "stopName",
+            "columnName": "stopName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "stopAddress",
+            "columnName": "stopAddress",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "stopNumber",
+            "columnName": "stopNumber",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pickupTime",
+            "columnName": "pickupTime",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dropTime",
+            "columnName": "dropTime",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "latitude",
+            "columnName": "latitude",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "longitude",
+            "columnName": "longitude",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "studentIds",
+            "columnName": "studentIds",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isActive",
+            "columnName": "isActive",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAt",
+            "columnName": "updatedAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "stopId"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_route_stops_routeId",
+            "unique": false,
+            "columnNames": [
+              "routeId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_route_stops_routeId` ON `${TABLE_NAME}` (`routeId`)"
+          },
+          {
+            "name": "index_route_stops_routeId_stopNumber",
+            "unique": true,
+            "columnNames": [
+              "routeId",
+              "stopNumber"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_route_stops_routeId_stopNumber` ON `${TABLE_NAME}` (`routeId`, `stopNumber`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "transport_vehicles",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "routeId"
+            ],
+            "referencedColumns": [
+              "vehicleId"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "hostels",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`hostelId` TEXT NOT NULL, `name` TEXT NOT NULL, `type` TEXT NOT NULL, `address` TEXT NOT NULL, `capacity` INTEGER NOT NULL, `numberOfRooms` INTEGER NOT NULL, `numberOfFloors` INTEGER NOT NULL, `wardenName` TEXT NOT NULL, `wardenContactNumber` TEXT NOT NULL, `facilities` TEXT, `description` TEXT, `isActive` INTEGER NOT NULL, `createdAt` INTEGER NOT NULL, `updatedAt` INTEGER NOT NULL, PRIMARY KEY(`hostelId`))",
+        "fields": [
+          {
+            "fieldPath": "hostelId",
+            "columnName": "hostelId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "address",
+            "columnName": "address",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "capacity",
+            "columnName": "capacity",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "numberOfRooms",
+            "columnName": "numberOfRooms",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "numberOfFloors",
+            "columnName": "numberOfFloors",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "wardenName",
+            "columnName": "wardenName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "wardenContactNumber",
+            "columnName": "wardenContactNumber",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "facilities",
+            "columnName": "facilities",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isActive",
+            "columnName": "isActive",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAt",
+            "columnName": "updatedAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "hostelId"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "hostel_rooms",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`roomId` TEXT NOT NULL, `hostelId` TEXT NOT NULL, `roomNumber` TEXT NOT NULL, `floor` INTEGER NOT NULL, `capacity` INTEGER NOT NULL, `occupiedBeds` INTEGER NOT NULL, `roomType` TEXT NOT NULL, `facilities` TEXT, `monthlyRent` REAL NOT NULL, `occupantIds` TEXT, `isActive` INTEGER NOT NULL, `createdAt` INTEGER NOT NULL, `updatedAt` INTEGER NOT NULL, PRIMARY KEY(`roomId`), FOREIGN KEY(`hostelId`) REFERENCES `hostels`(`hostelId`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "roomId",
+            "columnName": "roomId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "hostelId",
+            "columnName": "hostelId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "roomNumber",
+            "columnName": "roomNumber",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "floor",
+            "columnName": "floor",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "capacity",
+            "columnName": "capacity",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "occupiedBeds",
+            "columnName": "occupiedBeds",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "roomType",
+            "columnName": "roomType",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "facilities",
+            "columnName": "facilities",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "monthlyRent",
+            "columnName": "monthlyRent",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "occupantIds",
+            "columnName": "occupantIds",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isActive",
+            "columnName": "isActive",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAt",
+            "columnName": "updatedAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "roomId"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_hostel_rooms_hostelId",
+            "unique": false,
+            "columnNames": [
+              "hostelId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_hostel_rooms_hostelId` ON `${TABLE_NAME}` (`hostelId`)"
+          },
+          {
+            "name": "index_hostel_rooms_hostelId_roomNumber",
+            "unique": true,
+            "columnNames": [
+              "hostelId",
+              "roomNumber"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_hostel_rooms_hostelId_roomNumber` ON `${TABLE_NAME}` (`hostelId`, `roomNumber`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "hostels",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "hostelId"
+            ],
+            "referencedColumns": [
+              "hostelId"
+            ]
+          }
+        ]
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '883aea9497fbb6d5c94efcdab33a8aba')"
+    ]
+  }
+}
